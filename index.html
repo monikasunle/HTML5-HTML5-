@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息</title>
+    <style>
+        fieldset{
+            width: 420px;
+            padding: 10px 20px;
+        }
+        input{
+            width: 400px;
+            height: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font: 12px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>学生信息</h1>
+    <fieldset>
+        <legend id="dangan" style="color: red;">学生档案</legend>
+        <form>
+            姓名：<br>
+            <input type="text" name="userName" id="userName" required placeholder="请输入姓名"/>
+            <font style="color: red;">*</font><br>
+            学号：
+            <input type="text" name="userNumber" id="userNumber" required placeholder="请输入学号" maxlength="10"/>
+            <font style="color: red;">*</font><br>
+            手机号码：
+            <input type="tel" name="telephone" id="telephone" required placeholder="请输入手机号" maxlength="11" pattern="^1[3578]\d{9}$"/>
+            <font style="color: red;">*</font><br>
+            邮箱地址：
+            <input type="email" name="e-mail" id="e-mail" required placeholder="请输入邮箱地址" autocomplete="on"/>
+            <font style="color: red;">*</font><br>
+            录取学校：
+            <input type="text" name="school" id="school" list="myList"/>
+            <br>
+            入学成绩：
+            <input type="number" name="grade" id="grade" min="0" max="100" value=""/>
+            <br>
+            入学时间：
+            <input type="date"/>
+            <br>
+            <input type="submit" value="提交"/>
+            <datalist id="myList">
+                <option value="北京大学"></option>
+                <option value="清华大学"></option>
+                <option value="河北师范大学"></option>
+                <option value="北京师范大学"></option>
+                <option value="天津大学"></option>
+            </datalist>
+        </form>
+    </fieldset>
+</body>
+</html>
